@@ -356,6 +356,7 @@ namespace NameGenerator
 			}
 		}
 
+		//shows message box with fantasy name
 		private void fantasyNameToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			DialogResult dialogResult = MessageBox.Show("You fantasy name is: "+setFrantasyName(), "FANTASY NAME", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -367,6 +368,8 @@ namespace NameGenerator
 			{
 			}
 		}
+
+		//returns fantasy name assembled from three arrays 
 		private string setFrantasyName()
 		{
 			Random rnd = new Random();

@@ -152,7 +152,11 @@ namespace NameGenerator
 			MainWindow tmp_form = new MainWindow();
 
 			//Create connection with MSSQL database
-			Conn = new SqlConnection(@"Data Source=.\SQLEXPRESS; AttachDbFilename = http://www.pkastelik.beep.pl/database.mdf ;Integrated Security=True;Connect Timeout=30;User Instance=True");
+			Conn = new SqlConnection(@"Data Source=.\SQLEXPRESS;" +
+                @"AttachDbFilename=|DataDirectory|\database.mdf;
+                Integrated Security=True;
+                Connect Timeout=30;
+                User Instance=True");
 
 			//Updates progress of progressbar
 			tmp_form.SetProgress(15);
